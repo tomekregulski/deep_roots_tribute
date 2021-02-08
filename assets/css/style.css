@@ -29,14 +29,30 @@ nav {
 
 nav ul {
     display: flex;
-    justify-content: space-around;
-    align-items: baseline;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+nav li {
+    margin: 1%;
+    box-sizing: border-box;;
 }
 
 header img {
-    max-height: 500px;
     margin-left: auto;
     margin-right: auto;
+    object-fit: scale-down;
+}
+
+#tdr_banner {
+    display: none;
+}
+
+#tdr_text {
+    display: block;
+    width: 85%;
+    margin-top: 10%;
 }
 
 main {
@@ -46,9 +62,11 @@ main {
 
 section h2 {
     display: block;
-    text-align: left;
+    text-align: center;
     font-size: 1.5em;
     font-weight: 300;
+    padding-bottom: 1%;
+    border-bottom: solid 5px gold;
 }
 
 section {
@@ -56,7 +74,7 @@ section {
 }
 
 section p {
-    text-align: left;
+    text-align: center;
     padding-top: 2%;
     font-size: .8em;
     font-weight: 200;
@@ -67,4 +85,31 @@ section p {
     margin: 3% 0;
     display: flex;
     flex-direction: column;
+}
+
+@media screen and (min-width: 1350px) {
+    
+    nav ul {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: baseline;
+    }
+
+    #tdr_banner {
+        display: block;
+        width: 75%;
+        margin-top: 10%;
+    }
+
+    #tdr_text {
+        display: none;
+    }
+
+    section h2 {
+        text-align: left;
+    }
+
+    section p {
+        text-align: left;
+    }
 }
